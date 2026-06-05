@@ -1,6 +1,17 @@
 {
-  "nodeVersion": "20.x",
-  "buildCommand": "npm install && CI=false npm run build",
-  "outputDirectory": "build",
-  "installCommand": "npm install"
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
 }

@@ -1,0 +1,291 @@
+/* Donations Page - Simplified */
+.donations-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Scripture Banner */
+.scripture-banner {
+  text-align: center;
+  background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #f5a623;
+}
+
+.scripture-quote {
+  font-size: 18px;
+  font-style: italic;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.scripture-verse {
+  color: #f5a623;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Accounts Grid */
+.accounts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* Account Card */
+.account-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid;
+}
+
+.account-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.account-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.account-icon {
+  font-size: 28px;
+}
+
+.account-header h3 {
+  color: #1a3c8f;
+  margin: 0;
+  font-size: 20px;
+}
+
+.account-description {
+  padding: 15px 20px 0;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.account-details {
+  padding: 15px 20px;
+  background: #fafafa;
+  margin: 10px 15px;
+  border-radius: 12px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #555;
+  font-size: 14px;
+}
+
+.detail-value {
+  color: #333;
+  font-size: 14px;
+  font-family: monospace;
+  font-weight: 500;
+}
+
+.account-num {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.copyable-value {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.copyable-value:hover {
+  background: rgba(26, 60, 143, 0.1);
+}
+
+.copy-icon {
+  font-size: 14px;
+  color: #1a3c8f;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.copyable-value:hover .copy-icon {
+  opacity: 1;
+}
+
+.reference-note {
+  padding: 12px 20px 20px;
+  font-size: 13px;
+  color: #c41e3a;
+  background: #fff8f0;
+  margin: 0 15px 15px;
+  border-radius: 10px;
+}
+
+/* Instructions Card */
+.instructions-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.instructions-card h3 {
+  color: #1a3c8f;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.instructions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.instruction-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+.instruction-icon {
+  width: 30px;
+  height: 30px;
+  background: #1a3c8f;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.instruction-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.instruction-item strong {
+  color: #1a3c8f;
+}
+
+/* Impact Message */
+.impact-message {
+  background: linear-gradient(135deg, #1a3c8f 0%, #2c5eb8 100%);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+.impact-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.impact-emoji {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.impact-message h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.impact-message p {
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .accounts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .account-header h3 {
+    font-size: 18px;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .copyable-value {
+    padding-left: 0;
+  }
+  
+  .instructions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .impact-message {
+    padding: 25px;
+  }
+  
+  .impact-message h3 {
+    font-size: 20px;
+  }
+  
+  .scripture-quote {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .account-card {
+    border-radius: 16px;
+  }
+  
+  .account-header {
+    padding: 15px;
+  }
+  
+  .account-details {
+    padding: 12px 15px;
+  }
+  
+  .instruction-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,0 +1,29 @@
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-left: 4px solid var(--accent-gold);
+}
+
+.event-card h3 {
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+}
+
+.event-card p {
+  margin: 8px 0;
+  color: var(--dark-text);
+}
+
+.no-events {
+  text-align: center;
+  padding: 40px;
+  color: var(--dark-text);
+}

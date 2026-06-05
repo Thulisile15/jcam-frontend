@@ -1,0 +1,84 @@
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.media-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #1a3c8f;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.media-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.media-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.media-card:hover .media-icon {
+  transform: scale(1.1);
+}
+
+.media-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #1a3c8f;
+}
+
+.media-card p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Platform specific hover effects */
+.media-card[data-platform="youtube"]:hover .media-icon {
+  box-shadow: 0 0 20px rgba(255,0,0,0.3);
+}
+
+.media-card[data-platform="facebook"]:hover .media-icon {
+  box-shadow: 0 0 20px rgba(24,119,242,0.3);
+}
+
+.media-card[data-platform="tiktok"]:hover .media-icon {
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.media-card[data-platform="instagram"]:hover .media-icon {
+  box-shadow: 0 0 20px rgba(228,64,95,0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .media-grid {
+    gap: 20px;
+  }
+  
+  .media-card {
+    padding: 30px 20px;
+  }
+  
+  .media-card h3 {
+    font-size: 20px;
+  }
+  
+  .media-icon {
+    width: 60px;
+    height: 60px;
+  }
+}

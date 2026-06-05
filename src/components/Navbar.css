@@ -1,0 +1,307 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+  background: #ffffff;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Spacer to prevent content from hiding under fixed navbar */
+.navbar-spacer {
+  height: 80px;
+  width: 100%;
+}
+
+/* When scrolled, the spacer height can be reduced */
+.navbar-scrolled + .navbar-spacer {
+  height: 75px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Desktop Navigation - Black font color for all states */
+.nav-links {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* When scrolled, keep black color */
+.navbar-scrolled .nav-link {
+  color: #000000;
+}
+
+/* When navbar is transparent, also keep black color */
+.navbar:not(.navbar-scrolled) .nav-link {
+  color: #000000;
+}
+
+.nav-link:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.navbar-scrolled .nav-link:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.nav-link-active {
+  background: #c41e3a;
+  color: #ffffff;
+}
+
+.nav-link-active:hover {
+  background: #c41e3a;
+  color: #ffffff;
+}
+
+/* Admin Dashboard Button */
+.admin-nav-link {
+  background: #f5a623;
+  color: #1a3c8f;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.admin-nav-link:hover {
+  background: #e69500;
+  color: #1a3c8f;
+}
+
+/* Right Section */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-login-btn {
+  padding: 8px 20px;
+  background: #f5a623;
+  color: #1a3c8f;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.admin-login-btn:hover {
+  background: #e69500;
+  transform: translateY(-2px);
+}
+
+/* Hamburger Menu - Black color */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 28px;
+}
+
+.navbar-scrolled .hamburger {
+  color: #000000;
+}
+
+/* Mobile Menu - Links are already black */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  padding: 20px;
+  flex-direction: column;
+  gap: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.mobile-open {
+  display: flex;
+}
+
+.mobile-nav-link {
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mobile-nav-link-active {
+  background: #c41e3a;
+  color: #ffffff;
+}
+
+.mobile-admin-link {
+  background: #f5a623;
+  color: #1a3c8f;
+}
+
+.mobile-admin-login {
+  background: #f5a623;
+  color: #1a3c8f;
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-content h3 {
+  color: #1a3c8f;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.save-btn {
+  padding: 10px 25px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  padding: 10px 25px;
+  background: #999;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 3px;
+  }
+  
+  .nav-link {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .right-section {
+    display: none;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+  
+  .navbar-spacer {
+    height: 70px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
